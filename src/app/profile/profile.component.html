@@ -1,0 +1,35 @@
+
+
+
+
+
+<table class="table">
+    <thead >
+      <tr >
+        <th >id</th>
+        <th > Name</th>
+        <th >Gender</th>
+        <th >Address</th>
+        <th >Fess</th>
+        <th>Mark</th>
+        <th >DOB</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let std of students">
+        <th>{{std.id |uppercase}}</th>
+        <td>{{std.Name | lowercase |tablenamepipe:std.Gender}}</td>
+        <td>{{std.Gender}}</td>
+        <td>{{std.Address |slice :0:8}}</td>
+        <td>{{std.Fess |currency:'EUR':true:'1.3-3'}}</td>
+        <td>{{std.Mark |percent}}</td>
+        <td>{{std.DOB | date:'mediumDate' |uppercase}}</td>
+      </tr>
+      
+
+      
+
+      
+    </tbody>
+  </table>
+
